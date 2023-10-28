@@ -1,0 +1,19 @@
+<%- include("_header") %>
+
+<div class="container mt-4">
+<label class="mt-4 mb-2">TASK</label>
+<form action="/" method="POST" class="d-flex">
+<input type="text" class="form-control" name="todo" placeholder="insert task...">
+<input type="submit"  value="ToDo" class="btn btn-primary mx-2">
+</form>
+
+ 
+
+<ol class="list-group list-group-numbered mt-5">
+  <% files.forEach(file => { %>
+    <li class="list-group-item"><%= file %></li>
+    <a href="/todo/delete/<%= file._id %>" class="btn btn-danger">Delete</a>
+  <% }) %>
+  </ol>
+
+</div>
